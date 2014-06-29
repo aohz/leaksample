@@ -18,7 +18,8 @@ public class OrderFeed implements Runnable {
 	}
 
 	/**
-	 * Called by Spring after loading the context. Start producing orders
+	 * Spring calls start method (specified as default-init-method) after loading the context. 
+         * Then, start producing orders
 	 */
 	public void start() {
 
@@ -39,8 +40,7 @@ public class OrderFeed implements Runnable {
 
 	private Order createOrder() {
 
-		final String[] stocks = { "BLND.L", "DGE.L", "MKS.L", "PSON.L", "RIO.L", "PRU.L",
-				"LSE.L", "WMH.L" };
+		final String[] stocks = { "BLND.L", "DGE.L", "MKS.L", "PSON.L", "RIO.L", "PRU.L", "LSE.L", "WMH.L" };
 		int next = rand.nextInt(stocks.length);
 		long now = System.currentTimeMillis();
 

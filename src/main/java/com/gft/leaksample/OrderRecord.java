@@ -14,7 +14,7 @@ public class OrderRecord implements Runnable {
 
 	public void start() {
 
-		Thread thread = new Thread(this, "Order Recorder");
+		Thread thread = new Thread(this, "Order Database Recorder");
 		thread.start();
 	}
 
@@ -34,12 +34,9 @@ public class OrderRecord implements Runnable {
 	}
 
 	/**
-	 * Record the order in the database
-	 * 
-	 * This is a dummy method
-	 * 
-	 * @param order
-	 *            The order
+	 * @Description Mocking insertion of records/orders in the database.
+         * It pauses the thread for a second simulating the database operation.
+	 * @param order The order
 	 * @throws InterruptedException
 	 */
 	public void recordOrder(Order order) throws InterruptedException {

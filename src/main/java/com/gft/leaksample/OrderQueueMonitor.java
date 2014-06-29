@@ -5,8 +5,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Monitor the size of the queue
- * 
- * 
  */
 public class OrderQueueMonitor implements Runnable {
 
